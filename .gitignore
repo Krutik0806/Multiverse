@@ -1,0 +1,30 @@
+# Environment variables - NEVER push these
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Session files
+*.session
+*.session-journal
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

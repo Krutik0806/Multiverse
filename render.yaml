@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: multiverse-anime-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7477560586:AAHhOszWlArl4x2ea6JCb7CXYmR6C0Wi2CM
+      - key: MONGO_URI
+        value: mongodb+srv://Multiverse_user:Multiverse123@multiverse.pgqfvsu.mongodb.net/?appName=Multiverse
+      - key: UPSTASH_REDIS_REST_URL
+        value: https://enormous-opossum-102046.upstash.io
+      - key: UPSTASH_REDIS_REST_TOKEN
+        value: gQAAAAAAAY6eAAIocDEyZDY3ZjUzYjE1ZGQ0YzIzYmM4ZjgwYmMzZGY5MzI0YXAxMTAyMDQ2
+      - key: CLOUDINARY_CLOUD_NAME
+        value: dlvzhfun5
+      - key: CLOUDINARY_API_KEY
+        value: "332349478262569"
+      - key: CLOUDINARY_API_SECRET
+        value: ddQq7ctXdAXxD02rVSWXIy-pZ6o
+      - key: WEBHOOK_URL
+        fromService:
+          type: web
+          name: multiverse-anime-bot
+          property: host
+      - key: PORT
+        value: "10000"
